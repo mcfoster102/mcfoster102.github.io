@@ -6,38 +6,28 @@
 </head>
 <body>
 
-<?php
-// define variables and set to empty values
-$name = "";
-$nameErr = "";
+  <h2>WWU Equestrian Team</h2>
 
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-  if (empty($_POST["name"])) {
-    $nameErr = "Name is required";
-  } else {
-    $name = test_input($_POST["name"]);
-    // check if name only contains letters and whitespace
-    if (!preg_match("/^[a-zA-Z ]*$/",$name)) {
-      $nameErr = "Only letters and white space allowed"; 
+  <form name="login">
+  Username<input type="text" name="firstname"/>
+  Password<input type="text" name="lastname"/>
+  <input type="button" onclick="check(this.form)" value="Login"/>
+  <input type="reset" value="Cancel"/>
+  </form>
+  <script language="javascript">
+  function check(form)/*function to check userid & password*/
+  {
+   /*the following code checkes whether the entered userid and password are matching*/
+   if(form.firstname.value == "Mary" && form.lastname.value == "Foster")
+    {
+      window.open('target.html')/*opens the target page while Id & password matches*/
+    }
+   else
+   {
+     alert("Error incorrect name")/*displays error message*/
     }
   }
-}
-
-function test_input($data) {
-  $data = trim($data);
-  $data = stripslashes($data);
-  $data = htmlspecialchars($data);
-  return $data;
-}
-?>
-
-<h2>WWU Equestrian Team</h2>
-<form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?> 
-  Name: <input type="text" name="name">
-  <span class="error">* <?php echo $nameErr;?></span>
-  <br><br>
-  <input type="submit" name="submit" value="Submit">  
-</form>
+  </script>
 
 </body>
 </html>
