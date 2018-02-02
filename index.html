@@ -9,7 +9,7 @@
   <h2>WWU Equestrian Team</h2>
 
   <form name="login">
-  First Name<input type="text" name="firstname"/>
+  First Name<input type="text" name="firstname"n/>
   Last Name<input type="text" name="lastname"/>
   <input type="button" onclick="check(this.form)" value="Continue"/>
   <input type="reset" value="Cancel"/>
@@ -18,7 +18,7 @@
   function check(form)/*function to check userid & password*/
   {
    /*checkes whether the entered first name and last name are matching*/
-   if(form.firstname.value == "Mary" && form.lastname.value == "Foster")
+   if(form.firstname.value == "first" && form.lastname.value == "last")
     {
       window.open('availability.html')/*opens the availability page when the name matches*/
     }
