@@ -1,12 +1,9 @@
 body {
     background-color: powderblue;
+    text-align: center;
 }
 h2 {
     color: navy;
-    text-align: center;
 }
-input {
-    display: inline-block;
-    text-align: center;
-}
+
 
