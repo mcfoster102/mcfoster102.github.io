@@ -3,8 +3,9 @@ body {
 }
 h2 {
     color: navy;
+    text-align: center;
 }
-form {
+input {
     display: inline-block;
     text-align: center;
 }
