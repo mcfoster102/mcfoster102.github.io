@@ -5,9 +5,11 @@ body {
 h2 {
     color: navy;
 }
+#login {
+    padding: 5px;
+}
 table {
     margin: auto;
-    padding: 10px;
     text-align: center;
 }
 
