@@ -4,4 +4,8 @@ body {
 h2 {
     color: navy;
 }
+form {
+    display: inline-block;
+    text-align: center;
+}
 
